@@ -1,7 +1,13 @@
 // import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Appbar, PaperProvider, Divider, Text } from "react-native-paper";
+import {
+  Appbar,
+  PaperProvider,
+  Divider,
+  Text,
+  Button,
+} from "react-native-paper";
 
 export default function App() {
   return (
@@ -32,18 +38,28 @@ export default function App() {
             <Appbar.Action icon="help-circle-outline" />
           </Appbar.Header>
           <Divider bold={true} style={styles.navdivider} />
+
           <View style={styles.main}>
-            <Text variant="headlineMedium" style={styles.welcome}>
+            <Text variant="headlineLarge" style={styles.welcome}>
               Welcome
             </Text>
             <Text variant="titleLarge" style={styles.intro}>
-              To update language preference or learn about the app and how to
-              get started, click on the right side help icon.
+              To update language preference or learn about the app, click on the
+              top right help icon.
             </Text>
             <Text variant="titleLarge" style={styles.intro}>
-              To get started on your "me" session, you can go ahead and click on
-              the button below.
+              To begin your session, you can go ahead and click on the button
+              below.
             </Text>
+            <Button
+              mode="contained"
+              onPress={() => console.log("Pressed")}
+              style={styles.beginButton}
+              labelStyle={styles.beginButtonText}
+              compact={true}
+            >
+              Begin
+            </Button>
           </View>
         </LinearGradient>
       </View>
@@ -54,8 +70,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //     background: rgb(236,192,141),
-    // background: linear-gradient(90deg, rgba(236,192,141,0.6741071428571428) 0%, rgba(182,217,209,0.5088410364145659) 48%, rgba(236,192,141,1) 100%),
     alignItems: "center",
     justifyContent: "center",
   },
@@ -68,20 +82,36 @@ const styles = StyleSheet.create({
     // hairLineWidth: "1",
   },
   welcome: {
-    color: "#293745",
+    // color: "#293745",
+    color: "#186588",
+    fontWeight: 700,
+    marginTop: 20,
   },
   intro: {
     color: "#293745",
     marginTop: 22,
     marginLeft: 7,
     marginRight: 7,
-
+    marginTop: 40,
     // textAlign: "center",
   },
   main: {
     // flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 30,
+    marginTop: 0,
+  },
+  beginButton: {
+    marginTop: 45,
+    width: "35%",
+    height: "13%",
+    textAlign: "center",
+    backgroundColor: "#186588",
+  },
+  beginButtonText: {
+    color: "white",
+    paddingTop: 10,
+    margin: "auto",
+    fontSize: 22,
   },
 });
