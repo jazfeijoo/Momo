@@ -2,8 +2,10 @@ import { StyleSheet, SafeAreaView, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Text, Button } from "react-native-paper";
 import { useTranslation } from "react-i18next";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function Home() {
+export default function Home({ navigation }) {
   const { t } = useTranslation();
   return (
     <SafeAreaView style={styles.container}>
@@ -32,7 +34,7 @@ export default function Home() {
           </Text>
           <Button
             mode="contained"
-            onPress={() => console.log("Pressed")}
+            onPress={() => navigation.navigate("SessionStart")}
             style={styles.beginButton}
             labelStyle={styles.beginButtonText}
             compact={true}

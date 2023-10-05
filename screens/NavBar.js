@@ -5,12 +5,15 @@ import { Appbar, Divider, Menu, Text } from "react-native-paper";
 // import { useState } from "react";
 import i18next, { languageResources } from "../services/i18next";
 import languagesList from "../services/languageList.json";
+import { useNavigation } from "@react-navigation/native";
 
 export default function NavBar({
   showLanguageMenu,
   setShowLanguageMenu,
   setCurrentLanguage,
 }) {
+  const navigation = useNavigation();
+
   const changeLanguage = (lng) => {
     i18next.changeLanguage(lng);
     setCurrentLanguage(lng);
@@ -49,6 +52,7 @@ export default function NavBar({
             paddingTop: 10,
             fontSize: 35,
           }}
+          onPress={() => navigation.navigate("Home")}
         />
         <Appbar.Action icon="arrow-down-drop-circle-outline" />
       </Appbar.Header>

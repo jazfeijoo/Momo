@@ -1,6 +1,7 @@
 import { PaperProvider } from "react-native-paper";
 import Home from "./screens/Home";
 import NavBar from "./screens/NavBar";
+import SessionStart from "./screens/SessionStart";
 import { useState } from "react";
 //Navigation
 import { NavigationContainer } from "@react-navigation/native";
@@ -14,19 +15,24 @@ export default function App() {
 
   return (
     <PaperProvider>
-      <NavBar
-        showLanguageMenu={showLanguageMenu}
-        setShowLanguageMenu={setShowLanguageMenu}
-        setCurrentLanguage={setCurrentLanguage}
-        currentLanguage={currentLanguage}
-      />
       <NavigationContainer>
+        <NavBar
+          showLanguageMenu={showLanguageMenu}
+          setShowLanguageMenu={setShowLanguageMenu}
+          setCurrentLanguage={setCurrentLanguage}
+          currentLanguage={currentLanguage}
+        />
         <Stack.Navigator
           initialRouteName="Home"
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Home">
-            {() => <Home currentLanguage={currentLanguage} />}
+            {(props) => <Home {...props} currentLanguage={currentLanguage} />}
+          </Stack.Screen>
+          <Stack.Screen name="SessionStart">
+            {(props) => (
+              <SessionStart {...props} currentLanguage={currentLanguage} />
+            )}
           </Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
