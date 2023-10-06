@@ -1,20 +1,17 @@
-import React from "react";
-import { StyleSheet, SafeAreaView, View } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, SafeAreaView, View, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-// import { Button } from "react-native-paper";
+import { Text, Button } from "react-native-paper";
 import { useTranslation } from "react-i18next";
-
-import { useState } from "react";
-import { Button, Text } from "@ui-kitten/components";
-// import { Text } from "react-native-paper";
+// import { Button } from "@react-native-material/core";
 
 export default function Home() {
   const { t } = useTranslation();
   const [musicFreq, setMusicFreq] = useState(null);
 
-  const text_0to3 =
-    "0- 3HZ: deep sleep, dreaming, reduce stress, and so onnnnnn and so sonnnnn, helllooooo";
-  // const text_0to3 = "0- 3HZ:\n\ndeep sleep, dreaming, reduce stress";
+  // const text_0to3 =
+  //   "0- 3HZ: deep sleep, dreaming, reduce stress, and so onnnnnn and so sonnnnn, helllooooo";
+  //  const text_0to3 = "0- 3HZ:\n\ndeep sleep, dreaming, reduce stress";
 
   return (
     <SafeAreaView style={styles.container}>
@@ -34,17 +31,18 @@ export default function Home() {
           <Text variant="headlineMedium" style={styles.questionText}>
             {t("session-start-which-freq")}
           </Text>
-
-          <Button
-            style={styles.optionButton}
-            appearance="ghost"
-            textStyle={{ color: "#db9acb" }}
-          >
-            <Text style={styles.optionText}>
-              0- 3HZ: deep sleep, dreaming, reduce stress, and so onnnnnn, and
-              so onnnnnn and so sonnnnn, helllooooo, friend
-            </Text>
-          </Button>
+          <Text variant="bodyLarge" style={styles.questionSubText}>
+            {t("session-start-freq-subtext")}
+          </Text>
+          <TouchableOpacity style={styles.optionButton}>
+            <Text style={styles.optionText}>{t("option-text-0to3HZ")}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.optionButton}>
+            <Text style={styles.optionText}>{t("option-text-4to13HZ")}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.optionButton}>
+            <Text style={styles.optionText}>{t("option-text-14to30HZ")}</Text>
+          </TouchableOpacity>
         </View>
       </LinearGradient>
     </SafeAreaView>
@@ -63,7 +61,6 @@ const styles = StyleSheet.create({
   main: {
     marginTop: 40,
     alignItems: "center",
-    // justifyContent: "center",
     marginLeft: 13,
     marginRight: 13,
     height: "100%",
@@ -72,20 +69,29 @@ const styles = StyleSheet.create({
     color: "#164657",
     fontWeight: 600,
     marginTop: 20,
-    marginBottom: 30,
+    marginBottom: 10,
+  },
+  questionSubText: {
+    color: "#164657",
+    fontWeight: 400,
+    marginBottom: 20,
   },
   optionText: {
-    // width: "100%",
-    fontSize: 40,
+    width: "90%",
+    fontSize: 18,
+    color: "#164657",
+    margin: "auto",
+    padding: "auto",
   },
   optionButton: {
-    margin: 2,
-    // height: "100%",
-    // width: "80%",
-    // marginLeft: 50,
-    // marginRight: 50,
-    backgroundColor: "#dbb99a",
+    marginBottom: 15,
+    height: 75,
+    width: "90%",
+    backgroundColor: "#ded5cc",
     borderWidth: 2,
+    borderRadius: 10,
     borderColor: "#08678f",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
