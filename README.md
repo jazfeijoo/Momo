@@ -26,8 +26,11 @@ expo start
 
 ## Next Steps
 
-- need to add relevant audio files + media player
-- need to add timers for each session 
+- add relevant audio files + media player
+- add timers for each session
+- add uniform styling/design across app
+- add 2-3 breathing exercise options
+- add reflexology options (HOLD OFF)
 
 
 
