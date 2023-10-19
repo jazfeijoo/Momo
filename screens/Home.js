@@ -10,15 +10,8 @@ export default function Home({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <LinearGradient
-        locations={[0, 0.1, 0.3, 0.7, 0.9, 1]}
-        colors={[
-          "#d1c3b2",
-          "#bababa",
-          "#96adb5",
-          "#96adb5",
-          "#bababa",
-          "#d1c3b2",
-        ]}
+        locations={[0, 0.2, 0.8, 1]}
+        colors={["#0f0e0c", "#0f0e0c", "#0f0e0c", "#0f0e0c"]}
         style={styles.background}
       >
         <View style={styles.main}>
@@ -51,22 +44,20 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    // width: "100%",
-    // height: "100%",
   },
   background: {
     width: "100%",
     height: "100%",
   },
   welcomeText: {
-    color: "#164657",
+    color: "#c6c1ac",
     fontWeight: 700,
     marginTop: 20,
   },
   introText: {
-    color: "#164657",
+    color: "#c6c1ac",
     fontWeight: 600,
-    opacity: 0.8,
+    // opacity: 0.8,
     marginTop: 25,
     marginTop: 30,
   },

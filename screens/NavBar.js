@@ -47,7 +47,7 @@ export default function NavBar({
           title="momo"
           titleStyle={{
             alignSelf: "center",
-            color: "#186588",
+            color: "#a87613",
             fontWeight: "700",
             paddingTop: 10,
             fontSize: 35,
@@ -63,11 +63,11 @@ export default function NavBar({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#c2b6a6",
+    backgroundColor: "#c2bdb3",
     width: "100%",
   },
   navdivider: {
-    backgroundColor: "#164657",
+    backgroundColor: "#021723",
     height: 3,
   },
 });
