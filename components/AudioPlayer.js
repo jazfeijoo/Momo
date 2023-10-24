@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
-import { Button } from "react-native-paper";
+import { IconButton } from "react-native-paper";
 import { Audio } from "expo-av";
 
 export default function AudioPlayer() {
-  const [sound, setSound] = useState();
+  const [sound, setSound] = useState(undefined);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   async function playSound() {
     console.log("Loading Sound");
@@ -12,9 +13,14 @@ export default function AudioPlayer() {
       require("../assets/freq_3.2_hz.mp3")
     );
     setSound(sound);
-
     console.log("Playing Sound");
     await sound.playAsync();
+    setIsPlaying(true);
+  }
+
+  async function stopSound() {
+    await sound.unloadAsync();
+    setIsPlaying(false);
   }
 
   React.useEffect(() => {
@@ -28,7 +34,14 @@ export default function AudioPlayer() {
 
   return (
     <>
-      <Button onPress={playSound}>AUDIO BUTTON</Button>
+      <IconButton
+        onPress={!isPlaying ? playSound : stopSound}
+        style={styles.audioButton}
+        labelStyle={styles.audioButtonText}
+        icon={!isPlaying ? "play-circle" : "pause-circle"}
+        size={60}
+        iconColor="#FFFFFF"
+      />
     </>
   );
 }
@@ -50,5 +63,12 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: 700,
     marginTop: 50,
+  },
+  audioButton: {
+    marginTop: 40,
+    backgroundColor: "#8E9D8F",
+    borderWidth: 3,
+    borderRadius: 90,
+    borderColor: "#FFFFFF",
   },
 });
