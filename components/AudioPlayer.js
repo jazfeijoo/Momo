@@ -1,12 +1,13 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, View } from "react-native";
-import { Text } from "react-native-paper";
+import { StyleSheet } from "react-native";
+import { Button } from "react-native-paper";
+import { Audio } from "expo-av";
 
-export default function Session() {
+export default function AudioPlayer() {
   return (
-    <Text variant="headlineMedium" style={styles.titleText}>
-      AUDIO PLAYER HERE
-    </Text>
+    <>
+      <Button>AUDIO BUTTON</Button>
+    </>
   );
 }
 
