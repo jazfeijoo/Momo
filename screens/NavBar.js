@@ -30,6 +30,8 @@ export default function NavBar({
             <Appbar.Action
               icon="translate"
               onPress={() => setShowLanguageMenu(true)}
+              style={styles.navicon}
+              color="#f7f5e5"
             />
           }
         >
@@ -44,17 +46,18 @@ export default function NavBar({
           })}
         </Menu>
         <Appbar.Content
-          title="momo"
+          title="MOMO"
           titleStyle={{
             alignSelf: "center",
-            color: "#a87613",
+            color: "#D9BB70",
             fontWeight: "700",
             paddingTop: 10,
             fontSize: 35,
+            letterSpacing: 3,
           }}
           onPress={() => navigation.navigate("Home")}
         />
-        <Appbar.Action icon="arrow-down-drop-circle-outline" />
+        <Appbar.Action icon="arrow-down-drop-circle-outline" color="#f7f5e5" />
       </Appbar.Header>
       <Divider bold={true} style={styles.navdivider} />
     </View>
@@ -63,11 +66,13 @@ export default function NavBar({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#c2bdb3",
+    backgroundColor: "#011e20",
+    opacity: 1,
     width: "100%",
   },
   navdivider: {
-    backgroundColor: "#021723",
+    backgroundColor: "#01132",
+    opacity: 1,
     height: 3,
   },
 });

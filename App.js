@@ -1,7 +1,8 @@
 import { PaperProvider } from "react-native-paper";
 import Home from "./screens/Home";
 import NavBar from "./screens/NavBar";
-import SessionStart from "./screens/SessionStart";
+import SessionFrequency from "./screens/SessionFrequency";
+import Session from "./screens/Session";
 import { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -30,7 +31,12 @@ export default function App() {
           </Stack.Screen>
           <Stack.Screen name="SessionStart">
             {(props) => (
-              <SessionStart {...props} currentLanguage={currentLanguage} />
+              <SessionFrequency {...props} currentLanguage={currentLanguage} />
+            )}
+          </Stack.Screen>
+          <Stack.Screen name="Session">
+            {(props) => (
+              <Session {...props} currentLanguage={currentLanguage} />
             )}
           </Stack.Screen>
         </Stack.Navigator>
