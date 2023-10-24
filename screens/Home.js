@@ -1,5 +1,4 @@
 import { StyleSheet, SafeAreaView, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { Text, Button } from "react-native-paper";
 import { useTranslation } from "react-i18next";
 
@@ -7,11 +6,6 @@ export default function Home({ navigation }) {
   const { t } = useTranslation();
   return (
     <SafeAreaView style={styles.container}>
-      {/* <LinearGradient
-        locations={[0, 0.2, 0.8, 1]}
-        colors={["#0f0e0c", "#0f0e0c", "#0f0e0c", "#0f0e0c"]}
-        style={styles.background}
-      > */}
       <View style={styles.main}>
         <Text variant="headlineLarge" style={styles.titleText}>
           {t("welcome")}
@@ -33,7 +27,6 @@ export default function Home({ navigation }) {
           {t("begin")}
         </Button>
       </View>
-      {/* </LinearGradient> */}
     </SafeAreaView>
   );
 }

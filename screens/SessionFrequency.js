@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, SafeAreaView, View, TouchableOpacity } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { Text, Button } from "react-native-paper";
+import { Text } from "react-native-paper";
 import { useTranslation } from "react-i18next";
-// import { Button } from "@react-native-material/core";
 
 export default function SessionFrequency({ navigation }) {
   const { t } = useTranslation();
