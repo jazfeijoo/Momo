@@ -15,6 +15,7 @@ Expo: for testing in real time and quick starting the app
 React Navigation: for navigating between screens
 React Native Paper: framework for components (standard-compliant Material Design)
 React Native Material UI: framework for components (standard-compliant Material Design)
+Expo-Audio: library for playing audio
 
 ## Getting Started
 
