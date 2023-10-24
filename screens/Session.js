@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StyleSheet, SafeAreaView, View, TouchableOpacity } from "react-native";
+import React from "react";
+import { StyleSheet, SafeAreaView, View } from "react-native";
 import { Text } from "react-native-paper";
 import { useTranslation } from "react-i18next";
 import AudioPlayer from "../components/AudioPlayer";
