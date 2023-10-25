@@ -27,10 +27,9 @@ npx expo start
 
 ## Next Steps
 
-- add relevant audio files + media player
-- add timers for each session
-- add uniform styling/design across app
-- add 2-3 breathing exercise options
-- add reflexology options (HOLD OFF)
-- improve current translations not in EN, ES
-- add additional languages
+- Enhance audio player during MOMO session
+- Add timers for each session
+- During session option: add 2-3 breathing exercise options
+- During session option: add reflexology exercises
+- Improve current translations not in ES, ZH
+- Add additional languages
