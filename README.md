@@ -6,6 +6,9 @@ Queens is the most diverse place in the world. So, it was very important to me t
 
 MOMO sessions use sound frequencies to soothe your nervous system. To begin a session, all you have to do is answer 1-2 simple questions. That's also the only time you're ever really required to look at the screen. After starting your session, there are optional breathing and reflexology exercises that can also be done. Nearly all exercises can be comfortably done without disturbing the person right next to you (subway & bus friendly).
 
+<img width="760" alt="Screenshot 2023-10-25 at 3 50 09 PM" src="https://github.com/jazfeijoo/Momo/assets/61634471/3a40bf6e-f217-4872-99b3-0e734fe1d35f">
+
+
 ## How It's Made
 
 **Tech used:**
