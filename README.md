@@ -27,8 +27,10 @@ npx expo start
 
 ## Next Steps
 
-- Enhance audio player during MOMO session
-- Add timers for each session
+- Add duration option screen before routing to Session screen
+- Add timers for each session, then re-route to EndSession screen
+- Create EndSessionScreen (end session final audio/sound to signal end of each session)
+- Play music according to selected duration
 - During session option: add 2-3 breathing exercise options
 - During session option: add reflexology exercises
 - Improve current translations not in ES, ZH
