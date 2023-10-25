@@ -12,6 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState("en");
+  const [musicFrequency, setMusicFrequency] = useState(undefined);
 
   return (
     <PaperProvider>
@@ -27,16 +28,30 @@ export default function App() {
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Home">
-            {(props) => <Home {...props} currentLanguage={currentLanguage} />}
+            {(props) => (
+              <Home
+                {...props}
+                currentLanguage={currentLanguage}
+                setMusicFrequency={setMusicFrequency}
+              />
+            )}
           </Stack.Screen>
           <Stack.Screen name="SessionStart">
             {(props) => (
-              <SessionFrequency {...props} currentLanguage={currentLanguage} />
+              <SessionFrequency
+                {...props}
+                currentLanguage={currentLanguage}
+                setMusicFrequency={setMusicFrequency}
+              />
             )}
           </Stack.Screen>
           <Stack.Screen name="Session">
             {(props) => (
-              <Session {...props} currentLanguage={currentLanguage} />
+              <Session
+                {...props}
+                currentLanguage={currentLanguage}
+                musicFrequency={musicFrequency}
+              />
             )}
           </Stack.Screen>
         </Stack.Navigator>

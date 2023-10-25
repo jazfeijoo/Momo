@@ -1,17 +1,28 @@
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
-import { IconButton } from "react-native-paper";
+import { IconButton, Text } from "react-native-paper";
 import { Audio } from "expo-av";
 
-export default function AudioPlayer() {
+export default function AudioPlayer({ musicFrequency }) {
   const [sound, setSound] = useState(undefined);
   const [isPlaying, setIsPlaying] = useState(false);
 
   async function playSound() {
     console.log("Loading Sound");
-    const { sound } = await Audio.Sound.createAsync(
-      require("../assets/freq_3.2_hz.mp3")
-    );
+    const audioSelected =
+      musicFrequency === "0-3"
+        ? "0-3_3HZ_1.mp3"
+        : musicFrequency === "4-13"
+        ? "4-13_6HZ_1.mp3"
+        : "14-30_14HZ_1.mp3";
+
+    const { sound } =
+      musicFrequency === "0-3"
+        ? await Audio.Sound.createAsync(require(`../assets/0-3_3HZ_1.mp3`))
+        : musicFrequency === "4-13"
+        ? await Audio.Sound.createAsync(require(`../assets/4-13_6HZ_1.mp3`))
+        : await Audio.Sound.createAsync(require(`../assets/14-30_14HZ_1.mp3`));
+
     setSound(sound);
     console.log("Playing Sound");
     await sound.playAsync();

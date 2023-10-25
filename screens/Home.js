@@ -1,9 +1,13 @@
 import { StyleSheet, SafeAreaView, View } from "react-native";
 import { Text, Button } from "react-native-paper";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
-export default function Home({ navigation }) {
+export default function Home({ navigation, setMusicFrequency }) {
   const { t } = useTranslation();
+  useEffect(() => {
+    setMusicFrequency(undefined);
+  }, []);
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.main}>

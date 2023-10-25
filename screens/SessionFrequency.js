@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, SafeAreaView, View, TouchableOpacity } from "react-native";
 import { Text } from "react-native-paper";
 import { useTranslation } from "react-i18next";
 
-export default function SessionFrequency({ navigation }) {
+export default function SessionFrequency({ navigation, setMusicFrequency }) {
   const { t } = useTranslation();
-  const [musicFreq, setMusicFreq] = useState(null);
-
-  // const text_0to3 =
-  //   "0- 3HZ: deep sleep, dreaming, reduce stress, and so onnnnnn and so sonnnnn, helllooooo";
-  //  const text_0to3 = "0- 3HZ:\n\ndeep sleep, dreaming, reduce stress";
 
   return (
     <SafeAreaView style={styles.container}>
@@ -22,14 +17,29 @@ export default function SessionFrequency({ navigation }) {
         </Text>
         <TouchableOpacity
           style={styles.optionButton}
-          onPress={() => navigation.navigate("Session")}
+          onPress={() => {
+            setMusicFrequency("0-3");
+            navigation.navigate("Session");
+          }}
         >
           <Text style={styles.optionText}>{t("option-text-0to3HZ")}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.optionButton}>
+        <TouchableOpacity
+          style={styles.optionButton}
+          onPress={() => {
+            setMusicFrequency("4-13");
+            navigation.navigate("Session");
+          }}
+        >
           <Text style={styles.optionText}>{t("option-text-4to13HZ")}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.optionButton}>
+        <TouchableOpacity
+          style={styles.optionButton}
+          onPress={() => {
+            setMusicFrequency("14-30");
+            navigation.navigate("Session");
+          }}
+        >
           <Text style={styles.optionText}>{t("option-text-14to30HZ")}</Text>
         </TouchableOpacity>
       </View>
