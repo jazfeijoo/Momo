@@ -11,13 +11,13 @@ MOMO sessions use sound frequencies to soothe your nervous system. To begin a se
 
 ## How It's Made
 
-**Tech used:**
-React Native: framework for mobile apps
-i18next: framework for internationization
-Expo: for testing in real time and quick starting the app
-React Navigation: for navigating between screens
-React Native Paper: framework for components (standard-compliant Material Design)
-React Native Material UI: framework for components (standard-compliant Material Design)
+**Tech used:**\
+React Native: framework for mobile apps\
+i18next: framework for internationization\
+Expo: for testing in real time and quick starting the app\
+React Navigation: for navigating between screens\
+React Native Paper: framework for components (standard-compliant Material Design)\
+React Native Material UI: framework for components (standard-compliant Material Design)\
 Expo-Audio: library for playing audio
 
 ## Getting Started
