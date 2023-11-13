@@ -7,7 +7,21 @@ MOMO sessions use sound frequencies to soothe your nervous system. To begin a se
 
 <img width="1106" alt="Screenshot 2023-11-12 at 11 38 14 PM" src="https://github.com/jazfeijoo/Momo/assets/61634471/84d0a3c6-3991-41ae-8aea-49bb316f39ee">
 
+## Requirements
+**A wellness app for diverse commuters in cities**
 
+Wellness: 
+- All sounds are at a frequency that is calming for the nervous system
+- Minimal time required to have eyes on a screen
+- Breathing exercises are also oriented towards relaxation
+  
+Diverse:
+- Must offer at minimum 3 languages
+- Must be simple to use and follow for individuals that may not be the most tech savvy 
+
+Commuter Oriented:
+- Exercises can be done comfortably in small spaces, without disturbing others
+- All time ranges offered are below 30 minutes and can easily be fit in a commute (the average commute time for a New Yorker is over 30 minutes)
 ## How It's Made
 
 **Tech used:**\
@@ -26,23 +40,6 @@ npm install
 
 **Quick Start:**
 npx expo start
-
-## Requirements
-**A wellness app for diverse commuters in cities**
-
-Wellness: 
-- All sounds are at a frequency that is calming for the nervous system
-- Minimal time required to have eyes on a screen
-- Breathing exercises are also oriented towards relaxation
-  
-Diverse:
-- Must offer at minimum 3 languages
-- Must be simple to use and follow for individuals that may not be the most tech savvy 
-
-Commuter Oriented:
-- Exercises can be done comfortably in small spaces, without disturbing others
-- All time ranges offered are below 30 minutes and can easily be fit in a commute (the average commute time for a New Yorker is over 30 minutes)
-  
 
 ## Next Steps
 - Add duration option screen before routing to Session screen
