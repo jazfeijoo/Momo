@@ -27,8 +27,24 @@ npm install
 **Quick Start:**
 npx expo start
 
-## Next Steps
+## Requirements
+**A wellness app for diverse commuters in cities**
 
+Wellness: 
+- All sounds are at a frequency that is calming for the nervous system
+- Minimal time required to have eyes on a screen
+- Breathing exercises are also oriented towards relaxation
+  
+Diverse:
+- Must offer at minimum 3 languages
+- Must be simple to use and follow for individuals that may not be the most tech savvy 
+
+Commuter Oriented:
+- Exercises can be done comfortably in small spaces, without disturbing others
+- All time ranges offered are below 30 minutes and can easily be fit in a commute (the average commute time for a New Yorker is over 30 minutes)
+  
+
+## Next Steps
 - Add duration option screen before routing to Session screen
 - Add timers for each session, then re-route to EndSession screen
 - Create EndSessionScreen (end session final audio/sound to signal end of each session)
@@ -37,3 +53,5 @@ npx expo start
 - During session option: add reflexology exercises
 - Improve current translations 
 - Add additional languages: Bengali, Korean
+- Update theme/styling
+- Add custom icons (waves)
